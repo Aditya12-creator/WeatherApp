@@ -1,0 +1,141 @@
+/* Basic reset and font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #72b4e2, #1a6fc9);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main container */
+.weather-app {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Title */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* Search section */
+.search {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search button {
+    padding: 12px 20px;
+    background-color: #1a6fc9;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.search button:hover {
+    background-color: #145aa5;
+}
+
+/* Weather display */
+.weather {
+    display: none;
+    margin-top: 20px;
+}
+
+.weather-icon {
+    width: 120px;
+    margin: 0 auto;
+}
+
+.temperature {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+.description {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.detail {
+    flex: 1;
+    padding: 10px;
+}
+
+.detail i {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #1a6fc9;
+}
+
+.detail-title {
+    font-size: 14px;
+    color: #777;
+}
+
+.detail-value {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Error message */
+.error {
+    color: #e74c3c;
+    margin-top: 20px;
+    display: none;
+}
+
+/* Loading spinner */
+.loading {
+    display: none;
+    margin: 20px auto;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #1a6fc9;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

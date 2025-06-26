@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="./styles.css">
-  <title>Weather Application</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>This is a Weather Application</h1>
-  <script src="./script.js"></script>
+    <div class="weather-app">
+        <h1>Simple Weather App</h1>
+        
+        <div class="search">
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="search-btn">Search</button>
+        </div>
+        
+        <div class="loading" id="loading"></div>
+        
+        <div class="weather" id="weather">
+            <img class="weather-icon" id="weather-icon" src="">
+            <div class="temperature" id="temperature"></div>
+            <div class="description" id="description"></div>
+            
+            <div class="details">
+                <div class="detail">
+                    <i>💧</i>
+                    <div class="detail-title">Humidity</div>
+                    <div class="detail-value" id="humidity"></div>
+                </div>
+                <div class="detail">
+                    <i>💨</i>
+                    <div class="detail-title">Wind Speed</div>
+                    <div class="detail-value" id="wind-speed"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="error" id="error"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
